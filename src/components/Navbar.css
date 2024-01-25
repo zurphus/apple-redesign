@@ -1,0 +1,64 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    color: #54565A;
+    background-color: #E7ECEE;
+    height: 72px;
+    z-index: 999;
+}
+.navbar__logo__wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+.navbar__logo{
+    font-size: 1.875rem;
+    cursor: pointer;
+    transition: all 0.1s;
+    color: #353639;
+}
+.navbar__logo:hover{
+    color: #111;
+}
+.navbar__ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.navbar__ul__item{
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.navbar__ul__item:hover{
+    color: #000;
+}
+.navbar__iconwrap{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 25px;
+}
+.navbar__iconwrap__user{
+    font-size: 22px;
+}
+.navbar__icons{
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.navbar__icons:hover{
+    color: #111;
+}
+.navbar__icon__link{
+    color: inherit;
+    display: flex;
+}

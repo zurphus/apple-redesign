@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed&family=Pixelify+Sans&family=Poppins:wght@100;200;400;500;600&family=Questrial&family=REM:wght@300;400&family=Roboto:wght@500&family=Space+Grotesk&display=swap');
+
+.hero{
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+    padding: 0 32px;
+    
+    max-width: 1350px;
+    height: calc(100vh)
+}
+.hero *{
+    z-index: 1;
+}
+.hero__container-1{
+    margin-bottom: 5%;
+}
+.hero__container-1__text{
+    margin: 20px 0 0 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 72px;
+    letter-spacing: 2px;
+    line-height: 87.5px;
+    color: #232428;
+}
+.hero__container-1__text span:first-child{
+    background: linear-gradient(to right, #ec4899, #BC52C8);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.hero__container-1__buttons{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    margin: 25px 0 0 3px;
+}
+.buttons{
+    padding: 12px 32px;
+    border-radius: 4px;
+    border: none;
+
+    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #e5e7eb;
+    background: linear-gradient(to right, #ec4899, #8b5cf6);
+
+    cursor: pointer;
+}
+.hero__container-1__buttons__learn{
+    position: relative;
+    font-weight: 500;
+    font-size: 1.1rem;
+    
+    cursor: pointer;
+}
+.hero__container-1__buttons__learn::after{
+    content: '';
+    position: absolute;
+    bottom: -4.5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #232428;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: 0.2s;
+}
+.hero__container-1__buttons__learn:hover::after{
+    width: 100%;
+}
+.hero__container-2__image{
+    width: 600px;
+}
+
+
+

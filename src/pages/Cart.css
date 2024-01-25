@@ -1,0 +1,108 @@
+.cart {
+    max-width: 1024px;
+    margin: auto;
+
+    
+    height: fit-content;
+  }
+.cart__bag{
+    font-size: 36px;
+    margin: 15px 0;
+}
+.cart__delivery{
+    margin: 15px 0 30px;
+}
+.cart__button{
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+
+.cart__image{
+    width: 176px;
+    height: 176px;
+    object-fit:contain;
+}
+.cart__details__wrap{
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+}
+
+.cart__name{
+    font-size: 24px;
+}
+.cart__product__details-wrap{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.cart__product__details{
+    color: #3B82F5;
+    font-size: 16px;
+    padding: 0;
+    cursor: pointer;
+}
+.cart__product__details:hover{
+    text-decoration: underline;
+}
+
+.cart__price{
+    font-size: 24px;
+    font-weight: 600;
+}
+.cart__remove{
+    background-color: transparent;
+    border: none;
+    color: #3B82F5;
+    font-size: 16px;
+    padding: 0;
+    cursor: pointer;
+}
+.cart__remove:hover{
+    text-decoration: underline;
+}
+.cart__count__wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin: 0 10%;
+}
+.cart__product__count{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+.cart__product__container{
+    display: grid;
+    place-items: center;
+    grid-template-areas: "image name count count count count count price price";
+    padding: 14px 0 10px;
+    border-bottom: 1px solid #D1D5DB;
+}
+
+.IMAGE{
+    grid-area: image;
+}
+.NAME{
+    grid-area: name;
+}
+.COUNT{
+    display: flex;
+    align-items: center;
+    grid-area: count;
+    gap: 5px;
+}
+.PRICE{
+    grid-area: price;
+}

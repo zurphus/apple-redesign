@@ -41,8 +41,6 @@ const Promo = () => {
     }, [showMac, showiPhone, showWatch, showiPad, triggerState])
 
     const changeType = (productType) => {
-        setTriggerState(true)
-
         setShowMac(productType === 'mac')
         setShowiPhone(productType === 'iphone')
         setShowWatch(productType === 'watch')

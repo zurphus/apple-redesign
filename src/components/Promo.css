@@ -37,7 +37,7 @@
 .promo__type__buttons__active{
     background-color: #35383C;
     color: #E7ECEE;
-    border-image: linear-gradient(to right, #ec4899, #8b5cf6); /* Define the linear gradient colors */
+    border-image: linear-gradient(to right, #ec4899, #8b5cf6);
     border-image-slice: 1;
 }
 .products{
@@ -95,8 +95,6 @@
 .cart-icon{
     font-size: 2.1875rem;
 }
-
-
 .shop__link{
     visibility: hidden;
     position: fixed;
@@ -136,6 +134,8 @@
     color: #E7ECEE;
     background: linear-gradient(to right, #ec4899, #8b5cf6);
 }
+
+
 
 @media screen and (max-width: 1350px) {
     .products{

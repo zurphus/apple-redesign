@@ -4,15 +4,17 @@
     position: sticky;
     top: 0;
 
+    box-sizing: unset;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 35px;
 
-    margin: auto;
     padding: 0 32px;
+    margin: auto;
     
-    max-width: 1350px;
-    height: calc(100vh)
+    max-width: 1300px;
+    height: 100vh;
 }
 .hero *{
     z-index: 1;
@@ -76,8 +78,43 @@
 .hero__container-1__buttons__learn:hover::after{
     width: 100%;
 }
+.hero__container-2__image__wrap{
+    max-width: 600px;
+}
 .hero__container-2__image{
-    width: 600px;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+@media screen and (max-width: 1325px) {
+    .hero__container-1__text{
+        font-size: 3.75rem;
+        line-height: 1.2;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .hero__container-1__text{
+        font-size: 3rem;
+        line-height: 1;
+    }
+}
+@media screen and (max-width: 810px) {
+    .hero{
+        gap: 10px;
+    }
+    .hero__container-1__text{
+        font-size: 2.75rem;
+        line-height: 1;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero__container-2__image{
+        display: none;
+    }
+    .hero{
+        gap: 0;
+    }
 }
 
 

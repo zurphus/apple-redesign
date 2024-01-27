@@ -6,8 +6,9 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
+    min-height: 202.5vh;
     background-color: #E7ECEE;
 }
 #root{
-    min-height: 200vh;
+    min-height: 202.5vh;
 }

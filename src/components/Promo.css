@@ -1,6 +1,6 @@
 .promo{
     position: absolute;
-    top: calc(100vh + 70px);
+    top: calc(100vh + 20px);
 
     display: grid;
     place-items: center;
@@ -12,13 +12,14 @@
     z-index: 999 !important;
 }
 .promo__title{
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 500;
     letter-spacing: 1px;
     color: #E7ECEE;
     text-align: center;
 }
 .promo__buttons__wrap{
+    width: fit-content;
     margin: 35px 0 75px 0;
 }
 .promo__type__buttons{
@@ -26,7 +27,7 @@
     padding: 16px 24px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #616161;
     background-color: #1B1B1B;
     border: none;
@@ -58,7 +59,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 24px;
+    font-size: 1.5rem;
 
     width: 100%;
     height: 120px;
@@ -69,9 +70,9 @@
 }
 .product__img{
     box-sizing: border-box;
+    object-fit: contain;
     width: 320px;
     height: 288px;
-    object-fit:contain;
 }
 .product__name{
     line-height: 1.3;
@@ -92,6 +93,76 @@
     cursor: pointer;
 }
 .cart-icon{
-    font-size: 35px;
+    font-size: 2.1875rem;
 }
 
+
+.shop__link{
+    visibility: hidden;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #D1D5DB;
+
+    cursor: pointer;
+}
+.shop__appear{
+    font-size: 2.1875rem;
+    color: #616161;
+}
+.shop__appear__active{
+    visibility: visible;
+}
+.count{
+    position: absolute;
+    top: -7px;
+    right: -7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 28px;
+    height: 28px;
+    border-radius: 20px;
+    font-size: 11px;
+    color: #E7ECEE;
+    background: linear-gradient(to right, #ec4899, #8b5cf6);
+}
+
+@media screen and (max-width: 1350px) {
+    .products{
+        grid-template-columns: 400px 400px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .products{
+        grid-template-columns: 400px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .products{
+        grid-template-columns: 336px;
+    }
+    .promo__buttons__wrap{
+        scale: 0.75;
+    }
+    .product__img{
+        width: 256px;
+        height: 256px;
+    }
+    .product__name{
+        font-size: 1.25rem;
+        max-width: 180px;
+    }
+    .product__price{
+        font-size: 1.25rem;
+    }
+}

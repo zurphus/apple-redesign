@@ -8,7 +8,7 @@ import { RiUser3Line } from "react-icons/ri";
 
 const Navbar = () => {
 
-  const [productCount, setProductCount] = useState(null)
+  const [productCount, setProductCount] = useState(0)
 
   useEffect(() => {
     
@@ -32,7 +32,6 @@ const Navbar = () => {
 
             <Link to ="/cart" className='navbar__icon__link'>
               <PiHandbag className='navbar__icons'/>
-
             </Link>
             <RiUser3Line className='navbar__iconwrap__user navbar__icons'/>
         </div>

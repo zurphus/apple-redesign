@@ -65,21 +65,13 @@
     color: inherit;
     display: flex;
 }
-.navbar__count{
-    position: absolute;
-    top: -5px;
-    right: -5px;
-
+.navbar__sigin-link{
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
-    font-size: 0.5625rem;
-    color: #E7ECEE;
-    background: linear-gradient(to right, #ec4899, #8b5cf6);
+    color: inherit;
+}
+.navbar__profile-picture{
+    width: 34px;
+    height: 34px;
 }
 
 @media screen and (max-width: 768px) {

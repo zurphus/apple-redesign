@@ -53,9 +53,14 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #e5e7eb;
-    background: linear-gradient(to right, #ec4899, #8b5cf6);
+    background: linear-gradient(to right, #ec4899, #8b5cf6, #ec4899, #8b5cf6);
+    background-size: 300%;
+    transition: all 0.5s cubic-bezier(.22,.8,.52,1);
 
     cursor: pointer;
+}
+.buttons:hover{
+    background-position: 50%;
 }
 .hero__container-1__buttons__learn{
     position: relative;
@@ -116,6 +121,10 @@
         gap: 0;
     }
 }
-
+@media screen and (max-width: 390px) {
+    .hero{
+        padding: 0 10px;
+    }
+}
 
 

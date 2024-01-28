@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.css'
 import Navbar from '../components/Navbar';
 import iphone from '../assets/hero.png'
-import { Link } from 'react-router-dom';
 import Promo from '../components/Promo';
 
 const Home = () => {
+
+    useEffect(() => {
+        document.title = 'Apple Redesign'
+        let bodyElement = document.body
+        let rootElement = document.getElementById('root')
+
+        if (bodyElement && rootElement) {
+            bodyElement.style.minHeight = '202.5vh'
+            rootElement.style.height = '200vh'
+        }
+    }, [])
 
   return (
     <>

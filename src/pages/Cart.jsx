@@ -12,6 +12,14 @@ const Cart = () => {
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
     setTotalPrice(cartItems.reduce((acc, item) => acc + item.price * item.count, 0))
+
+    let bodyElement = document.body;
+    let rootElement = document.getElementById('root')
+
+    if (bodyElement && rootElement) {
+        bodyElement.style.minHeight = 'fit-content';
+        rootElement.style.height = 'fit-content';
+    }
   }, [])
 
   const { cartItems, removeFromCart } = useCart()

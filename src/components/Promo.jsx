@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useReducer } from 'react';
 import './Promo.css';
-import Navbar from './Navbar';
 import products from '../data/products';
 import { Link } from 'react-router-dom';
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useCart } from '../context/context';
 import { PiHandbag } from "react-icons/pi";
-import { PiCloudFogLight } from 'react-icons/pi';
 
 const Promo = () => {
 
@@ -47,11 +45,41 @@ const Promo = () => {
         setShowiPad(productType === 'ipad')
     };
 
+    const initialState = {
+        notification: null,
+    };
+    
+    const reducer = (state, action) => {
+        switch (action.type) {
+            case 'SHOW_NOTIFICATION':
+                return { ...state, notification: action.payload }
+            case 'HIDE_NOTIFICATION':
+                return { ...state, notification: null, notificationTimeout: null }
+            case 'SET_NOTIFICATION_TIMEOUT':
+                return { ...state, notificationTimeout: action.payload }
+            default:
+                return state
+        }
+    }
+      
+    const [state, dispatch] = useReducer(reducer, initialState)
+
     const handleOrder = (product) => {
         addToCart(product)
         setTriggerState(true)
         setProductCount(prevCount => prevCount += 1)
-        console.log('fjsdklfsd')
+
+        dispatch({ type: 'SHOW_NOTIFICATION', payload: `${product.name} was added to basket` })
+
+        if (state.notificationTimeout) {
+            clearTimeout(state.notificationTimeout)
+        }
+
+        const timeoutId = setTimeout(() => {
+            dispatch({ type: 'HIDE_NOTIFICATION' })
+        }, 3000);
+
+        dispatch({ type: 'SET_NOTIFICATION_TIMEOUT', payload: timeoutId })
     }
 
   return (
@@ -93,6 +121,7 @@ const Promo = () => {
                 </div>
             </Link>
         </section>
+        {state.notification && <div className={`notification appearing ${state.notification && 'show'}`}>{state.notification}</div>}
     </>
   );
 };

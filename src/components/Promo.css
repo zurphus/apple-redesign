@@ -137,6 +137,8 @@
 
 
 
+
+
 @media screen and (max-width: 1350px) {
     .products{
         grid-template-columns: 400px 400px;
@@ -157,6 +159,13 @@
     .product__img{
         width: 256px;
         height: 256px;
+    }
+    .product__buy{
+        width: 61px;
+        height: 61px;
+    }
+    .cart-icon{
+        font-size: 28px;
     }
     .product__name{
         font-size: 1.25rem;

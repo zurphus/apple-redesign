@@ -36,7 +36,7 @@ const Cart = () => {
       <Navbar />
       <main className='cart__container'>
         {cartItems.length === 0 ? (
-          <section className='cart'>
+          <section className='empty__cart'>
             <h1 className='cart__bag'>Your bag is empty.</h1>
             <p className='cart__delivery'>Free delivery and returns</p>
             <Link to="/" className='buttons cart__button'>Continue Shopping</Link>

@@ -51,19 +51,19 @@ const products = [
                     id: 4,
                     image: mac4,
                     name: 'iMac 24"',
-                    price: 999,
+                    price: 1299,
                 },
                 {
                     id: 5,
                     image: mac5,
                     name: 'Mac mini',
-                    price: 999,
+                    price: 699,
                 },
                 {
                     id: 6,
                     image: mac6,
                     name: 'Mac Studio',
-                    price: 999,
+                    price: 1999,
                 },
                 {
                     id: 7,

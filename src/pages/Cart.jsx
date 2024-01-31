@@ -3,7 +3,7 @@ import './Cart.css'
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/context';
-import { FaChevronDown } from "react-icons/fa6";
+import { FaChampagneGlasses, FaChevronDown } from "react-icons/fa6";
 import { BsLightningCharge } from "react-icons/bs";
 
 const Cart = () => {
@@ -61,7 +61,6 @@ const Cart = () => {
                     <img className='cart__image' src={item.image} alt={item.name} />
                   </div>
                   
-                  
                   <div className='NAME'>
                     <h3 className='cart__name'>{item.name}</h3>
                     <div className='cart__product__details-wrap'>
@@ -76,7 +75,6 @@ const Cart = () => {
                     <FaChevronDown className='cart__product__details'/>
                   </div>
 
-
                   <div className='PRICE'>
                     <p className='cart__price'>${calculateOneProduct(item.id)}.00</p>
                     <button className='cart__remove' onClick={() => {
@@ -84,7 +82,6 @@ const Cart = () => {
                         setTriggerState(prevState => prevState += 1)
                       }}>Remove</button>
                   </div>
-                  
                 </div>
               ))}
             </section>

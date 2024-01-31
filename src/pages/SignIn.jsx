@@ -39,28 +39,13 @@ const SignIn = ({ onSignIn }) => {
     return () => {
       window.removeEventListener('resize', sizeControl)
     }
-  });
+  }, []);
 
   const handleClick = () => {
     signInWithPopup(auth, provider).then(() => {
       navigate('/')
     })
   }
-
-  {/*
-  const handleClick = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      navigate.push('/');
-      {/*
-      const user = result.user;
-      onSignIn(user);
-    
-    } catch (error) {
-      console.error('Error signing in:', error.message);
-    }
-  };
-  */}
 
   
   return (

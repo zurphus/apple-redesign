@@ -4,7 +4,7 @@
 
 Explore a reimagined Apple experience where design meets functionality. From the sleek interface to the functional shopping cart and user sign-in, every detail is crafted to provide an intuitive and delightful user journey.
 
-**Live Website:** 
+**Live Website:** [Apple Redesign](https://https://apple-redesign-gules.vercel.app/.com/)
 
 ### Built with:
  - HTML

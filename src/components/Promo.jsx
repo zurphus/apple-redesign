@@ -77,7 +77,7 @@ const Promo = () => {
 
         const timeoutId = setTimeout(() => {
             dispatch({ type: 'HIDE_NOTIFICATION' })
-        }, 3000);
+        }, 150000);
 
         dispatch({ type: 'SET_NOTIFICATION_TIMEOUT', payload: timeoutId })
     }
@@ -120,6 +120,7 @@ const Promo = () => {
                     <span>{productCount}</span>
                 </div>
             </Link>
+            
         </section>
         {state.notification && <div className={`notification appearing ${state.notification && 'show'}`}>{state.notification}</div>}
     </>

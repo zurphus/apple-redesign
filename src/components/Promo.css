@@ -151,6 +151,7 @@
     border-radius: 5px;
 
     max-width: 450px;
+    width: fit-content !important;
     font-size: 1rem;
     user-select: none;
 
@@ -159,6 +160,7 @@
     transform: translate(-50%, -60%);
     transition: opacity 0.2s, transform 0.2s;
 
+    box-sizing: unset;
     z-index: 999999;
   }
   .notification.show{
@@ -166,7 +168,6 @@
     opacity: 1;
     transform: translate(-50%, -50%);
   }
-
 
 
 @media screen and (max-width: 1350px) {
